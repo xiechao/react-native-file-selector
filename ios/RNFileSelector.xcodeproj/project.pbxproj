@@ -10,6 +10,7 @@
 		81A297F4FE4B7837D66616E8 /* Pods_RNFileSelector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AE4589AE9EAE28E8C0C60 /* Pods_RNFileSelector.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNFileSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNFileSelector.m */; };
 		CE4052362144E03300F995AA /* FileBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4052332144E02B00F995AA /* FileBrowser.framework */; };
+		F480B34F225F1CCC00196E3E /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480B34E225F1CCC00196E3E /* demo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		B3E7B5891CC2AC0600A0062D /* RNFileSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFileSelector.m; sourceTree = "<group>"; };
 		CE40522D2144E02B00F995AA /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		CE8AE4589AE9EAE28E8C0C60 /* Pods_RNFileSelector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNFileSelector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F480B34D225F1CCC00196E3E /* RNFileSelector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNFileSelector-Bridging-Header.h"; sourceTree = "<group>"; };
+		F480B34E225F1CCC00196E3E /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +78,13 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				F480B34E225F1CCC00196E3E /* demo.swift */,
 				B3E7B5881CC2AC0600A0062D /* RNFileSelector.h */,
 				B3E7B5891CC2AC0600A0062D /* RNFileSelector.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				CE569A9020403969005B5ACC /* Frameworks */,
 				6EE51A2FE94F687D07C4BA7A /* Pods */,
+				F480B34D225F1CCC00196E3E /* RNFileSelector-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +147,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -150,6 +156,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F480B34F225F1CCC00196E3E /* demo.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNFileSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,16 +311,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A73D196C67F67BCCD9F439C8 /* Pods-RNFileSelector.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNFileSelector;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNFileSelector-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -320,16 +333,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3EA737E0FFBB40D2ECF9C736 /* Pods-RNFileSelector.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNFileSelector;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNFileSelector-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
